@@ -1,13 +1,5 @@
-/* =============================================================
-   NOIR PALACE — Complete Stylesheet
-   Mobile-first | Black & Gold | Luxury Hotel Demo
-   ============================================================= */
-
-/* ──────────────────────────────────────────
-   1. CUSTOM PROPERTIES
-────────────────────────────────────────── */
 :root {
-  /* Colors */
+
   --bg:          #0b0c10;
   --bg-soft:     #12141a;
   --bg-card:     #161820;
@@ -20,24 +12,18 @@
   --glass:       rgba(255,255,255,.06);
   --glass-border:rgba(255,255,255,.10);
 
-  /* Shadows */
   --shadow-sm:   0 8px 32px rgba(0,0,0,.45);
   --shadow-md:   0 20px 60px rgba(0,0,0,.60);
   --shadow-lg:   0 32px 100px rgba(0,0,0,.80);
   --gold-shadow: 0 8px 40px rgba(212,175,55,.35);
 
-  /* Spacing */
   --section-pad: clamp(60px, 10vw, 140px);
   --container:   1240px;
 
-  /* Easing */
   --ease:        cubic-bezier(.25,.46,.45,.94);
   --ease-spring: cubic-bezier(.34,1.56,.64,1);
 }
 
-/* ──────────────────────────────────────────
-   2. RESET & BASE
-────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -84,9 +70,6 @@ button {
   background: none;
 }
 
-/* ──────────────────────────────────────────
-   3. TYPOGRAPHY
-────────────────────────────────────────── */
 h1, h2, h3, h4 {
   font-family: "Playfair Display", Georgia, serif;
   line-height: 1.2;
@@ -119,9 +102,6 @@ em {
   line-height: 1.7;
 }
 
-/* ──────────────────────────────────────────
-   4. LAYOUT UTILITIES
-────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -164,9 +144,6 @@ em {
   .two-col-reverse > :last-child  { order: 1; }
 }
 
-/* ──────────────────────────────────────────
-   5. BUTTONS
-────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -220,9 +197,6 @@ em {
   transform: translateY(-3px);
 }
 
-/* ──────────────────────────────────────────
-   6. PRELOADER
-────────────────────────────────────────── */
 #preloader {
   position: fixed;
   inset: 0;
@@ -283,9 +257,6 @@ em {
   color: var(--text-muted);
 }
 
-/* ──────────────────────────────────────────
-   7. NAVIGATION
-────────────────────────────────────────── */
 .nav {
   position: fixed;
   top: 0;
@@ -312,7 +283,6 @@ em {
   padding-bottom: 12px;
 }
 
-/* Logo */
 .logo {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
@@ -325,7 +295,6 @@ em {
   color: var(--gold);
 }
 
-/* Desktop nav links */
 .nav-links {
   display: none;
   align-items: center;
@@ -367,7 +336,6 @@ em {
   width: 100%;
 }
 
-/* Nav right */
 .nav-right {
   display: flex;
   align-items: center;
@@ -382,7 +350,6 @@ em {
   .nav-cta { display: inline-flex; }
 }
 
-/* Hamburger */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -413,7 +380,6 @@ em {
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* Mobile nav panel */
 @media (max-width: 899px) {
   .nav-links {
     position: fixed;
@@ -447,9 +413,6 @@ em {
   }
 }
 
-/* ──────────────────────────────────────────
-   8. HERO
-────────────────────────────────────────── */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -534,7 +497,6 @@ em {
   justify-content: center;
 }
 
-/* Scroll indicator */
 .hero-scroll {
   position: absolute;
   bottom: clamp(100px, 15vw, 130px);
@@ -563,7 +525,6 @@ em {
   background: linear-gradient(to bottom, var(--gold), transparent);
 }
 
-/* Hero badges */
 .hero-badges {
   position: absolute;
   bottom: clamp(24px, 4vw, 40px);
@@ -619,9 +580,6 @@ em {
   flex-shrink: 0;
 }
 
-/* ──────────────────────────────────────────
-   9. STATS
-────────────────────────────────────────── */
 .stats {
   background: var(--bg-soft);
   border-top: 1px solid var(--glass-border);
@@ -660,9 +618,6 @@ em {
   color: var(--text-muted);
 }
 
-/* ──────────────────────────────────────────
-   10. ABOUT
-────────────────────────────────────────── */
 .about {
   background: radial-gradient(circle at 80% 50%, rgba(212,175,55,.05), transparent 60%), var(--bg);
 }
@@ -734,7 +689,6 @@ em {
   margin-bottom: 28px;
 }
 
-/* Features list */
 .features-list {
   display: flex;
   flex-direction: column;
@@ -767,9 +721,6 @@ em {
   color: var(--text-muted);
 }
 
-/* ──────────────────────────────────────────
-   11. ROOMS
-────────────────────────────────────────── */
 .rooms {
   background: var(--bg-soft);
 }
@@ -884,9 +835,6 @@ em {
   border-radius: 20px;
 }
 
-/* ──────────────────────────────────────────
-   12. DINING
-────────────────────────────────────────── */
 .dining {
   background: radial-gradient(circle at 20% 60%, rgba(212,175,55,.06), transparent 55%), var(--bg);
 }
@@ -964,9 +912,6 @@ em {
   color: var(--text-muted);
 }
 
-/* ──────────────────────────────────────────
-   13. SPA
-────────────────────────────────────────── */
 .spa {
   position: relative;
   background: var(--bg-soft);
@@ -1033,9 +978,6 @@ em {
   text-align: center;
 }
 
-/* ──────────────────────────────────────────
-   14. GALLERY
-────────────────────────────────────────── */
 .gallery {
   background: var(--bg);
   padding-bottom: 0;
@@ -1080,9 +1022,6 @@ em {
   grid-column: span 2;
 }
 
-/* ──────────────────────────────────────────
-   15. TESTIMONIALS
-────────────────────────────────────────── */
 .testimonials {
   background: var(--bg-soft);
   border-top: 1px solid var(--glass-border);
@@ -1152,9 +1091,6 @@ em {
   color: var(--text-muted);
 }
 
-/* ──────────────────────────────────────────
-   16. CTA BANNER
-────────────────────────────────────────── */
 .cta {
   position: relative;
   text-align: center;
@@ -1194,9 +1130,6 @@ em {
   justify-content: center;
 }
 
-/* ──────────────────────────────────────────
-   17. CONTACT
-────────────────────────────────────────── */
 .contact {
   background: var(--bg);
 }
@@ -1284,7 +1217,6 @@ em {
   background: var(--gold-glow);
 }
 
-/* Contact form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1362,9 +1294,6 @@ em {
   min-height: 120px;
 }
 
-/* ──────────────────────────────────────────
-   18. FOOTER
-────────────────────────────────────────── */
 .footer {
   background: #06070a;
   border-top: 1px solid var(--glass-border);
@@ -1452,9 +1381,6 @@ em {
   opacity: .8;
 }
 
-/* ──────────────────────────────────────────
-   19. STICKY BAR
-────────────────────────────────────────── */
 .stickyBar {
   position: fixed;
   left: 16px;
@@ -1547,9 +1473,6 @@ em {
   background: rgba(255,255,255,.14);
 }
 
-/* ──────────────────────────────────────────
-   20. SCROLL-REVEAL ANIMATIONS
-────────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -1561,7 +1484,6 @@ em {
   transform: translateY(0);
 }
 
-/* Staggered children */
 .rooms-grid .reveal:nth-child(2),
 .spa-grid  .reveal:nth-child(2),
 .testimonials-grid .reveal:nth-child(2) { transition-delay: .12s; }
@@ -1574,7 +1496,6 @@ em {
 .spa-grid .reveal:nth-child(5) { transition-delay: .20s; }
 .spa-grid .reveal:nth-child(6) { transition-delay: .30s; }
 
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -1595,28 +1516,17 @@ em {
   }
 }
 
-/* ──────────────────────────────────────────
-   21. FOCUS STYLES (Accessibility)
-────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
-/* ──────────────────────────────────────────
-   22. UTILITY ANIMATIONS
-────────────────────────────────────────── */
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%, 60%  { transform: translateX(-6px); }
   40%, 80%  { transform: translateX(6px); }
 }
 
-/* ──────────────────────────────────────────
-   23. RESPONSIVE TWEAKS
-────────────────────────────────────────── */
-
-/* Hide second gallery image on very small screens */
 @media (max-width: 479px) {
   .gallery-item.wide { grid-column: span 1; }
   .hero-badges { display: none; }
@@ -1629,7 +1539,6 @@ em {
   .hero-scroll { display: none; }
 }
 
-/* Extra safety: no horizontal scroll */
 body, .nav, .section, .footer {
   max-width: 100vw;
 }

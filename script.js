@@ -1,8 +1,3 @@
-/* =============================================================
-   NOIR PALACE — Main Script
-   Preloader · Nav · Hamburger · Scroll reveal · Counters · Form · Sticky bar
-   ============================================================= */
-
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyBar();
 });
 
-/* ──────────────────────────────────────────
-   PRELOADER
-────────────────────────────────────────── */
 function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
@@ -34,9 +26,6 @@ function initPreloader() {
   }
 }
 
-/* ──────────────────────────────────────────
-   NAV SCROLL BEHAVIOUR
-────────────────────────────────────────── */
 function initNav() {
   const nav = document.getElementById('nav');
   if (!nav) return;
@@ -46,9 +35,6 @@ function initNav() {
   update();
 }
 
-/* ──────────────────────────────────────────
-   HAMBURGER MENU
-────────────────────────────────────────── */
 function initHamburger() {
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
@@ -80,9 +66,6 @@ function initHamburger() {
   });
 }
 
-/* ──────────────────────────────────────────
-   SCROLL REVEAL (Intersection Observer)
-────────────────────────────────────────── */
 function initScrollReveal() {
   const elements = document.querySelectorAll('.reveal');
   if (!elements.length) return;
@@ -102,9 +85,6 @@ function initScrollReveal() {
   elements.forEach(el => observer.observe(el));
 }
 
-/* ──────────────────────────────────────────
-   ANIMATED COUNTERS
-────────────────────────────────────────── */
 function initCounters() {
   const stats = document.querySelectorAll('.stat[data-count]');
   if (!stats.length) return;
@@ -119,8 +99,8 @@ function initCounters() {
         const number  = el.querySelector('.stat-number');
         const target  = parseInt(el.dataset.count, 10);
         const suffix  = el.dataset.suffix || '';
-        const dur     = 1600; // ms
-        const step    = 16;   // ~60fps
+        const dur     = 1600;
+        const step    = 16;
         const steps   = dur / step;
         let   current = 0;
 
@@ -139,9 +119,6 @@ function initCounters() {
   stats.forEach(stat => observer.observe(stat));
 }
 
-/* ──────────────────────────────────────────
-   CONTACT FORM
-────────────────────────────────────────── */
 function initForm() {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -156,7 +133,6 @@ function initForm() {
     const hasName  = nameEl.value.trim();
     const hasEmail = emailEl.value.trim();
 
-    // Clear previous errors
     clearError(nameEl);
     clearError(emailEl);
 
@@ -213,9 +189,6 @@ function shakeBtn(btn) {
   btn.addEventListener('animationend', () => { btn.style.animation = ''; }, { once: true });
 }
 
-/* ──────────────────────────────────────────
-   STICKY BAR
-────────────────────────────────────────── */
 function initStickyBar() {
   const bar   = document.getElementById('stickyBar');
   const close = document.getElementById('stickyClose');
